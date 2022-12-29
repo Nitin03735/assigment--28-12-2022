@@ -1,0 +1,8 @@
+FROM ubuntu
+WORKDIR /mnt
+RUN apt-get update -y
+RUN apt-get install apache2 -y
+RUN apt-get install git -y
+RUN service apache2 start
+RUN git clone https://github.com/Nitin03735/assigment--28-12-2022.git -b 22Q1
+RUN cp -r assigment--28-12-2022/index.html /var/www/html/
